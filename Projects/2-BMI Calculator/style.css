@@ -1,0 +1,38 @@
+.container{
+    text-align: center;
+    color: red;
+}
+button{
+    color: white;
+    background-color: blue;
+    box-shadow:none ;
+    border: 0cap;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+button:hover{
+    font-family:cursive;
+   background-color: rgb(105, 78, 226);
+   cursor: pointer;
+}
+#results{
+    margin: 20px;
+    border: 3px solid yellow;
+    width: 30%;
+    height: 30px;
+    margin-left :35%;
+    color: rgb(197, 186, 26);
+    font-family: fantasy;
+    padding-top: 4px;
+}
+#classification{
+    margin: 20px;
+    border: 3px solid lightskyblue;
+    /* width: 30%;
+    height: 30px; */
+    /* margin-left :35%; */
+   font-size:medium;
+    color: rgb(197, 186, 26);
+    
+    padding-top: 4px;
+}
