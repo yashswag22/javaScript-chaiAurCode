@@ -13,6 +13,7 @@ buttons.forEach(
             console.log(nameOfEvent)
             console.log(nameOfEvent.target) ; // target give the source of event/ ki event aa kaha se raha hai
             body.style.backgroundColor = nameOfEvent.target.id;
+            button.innerHTML = `✓`;
         }
         )
     }
