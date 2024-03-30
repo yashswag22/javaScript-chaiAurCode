@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(37, 29, 29);
+    color: white;
+}
+
+.center{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   /* //text-align: center; */
+}
+
+#clock{
+    font-size: 40px;
+    /* height: 25px;
+    width: 100px; */
+    background-color: orange;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+
+}
+#timer{
+    font-size: 40px;
+    /* height: 25px;
+    width: 100px; */
+    background-color: orange;
+    padding: 20px 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
