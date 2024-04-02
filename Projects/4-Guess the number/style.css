@@ -39,7 +39,7 @@ h1{
     calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
   outline-offset: .1em;
   transition: 0.3s;
-}
+}-
 
 #subt:hover,
 #subt:focus-visible {
