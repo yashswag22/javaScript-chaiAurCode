@@ -7,16 +7,21 @@
 </head>
 <body style="background-color: black; text-align: center;">
     <div id="container" style="width:200px; border:3px solid whitesmoke; height:200px; color: white; margin-left: 32%; margin-top:30%;">
-        <div id="image" style="height: 170px; width: 170px; border: solid blue; margin: auto;"></div>
+        <div id="image" style="height: 170px; width: 170px; border: solid blue; margin: auto;">
+        <button id="getdetails"> fetch data </button>
+
+        </div>
         <div id="name" style="border: solid yellow;">@coding108</div>
     </div>
 </body>
 <script>
     const imgbox = document.querySelector("#image");
     const userName = document.querySelector("#name");
-
    
-
+    const buttonn = document.querySelector("#getdetails");
+    buttonn.addEventListener("click", myfunction);
+   
+function myfunction (){
  function fetch() {
     const apiUrl = 'https://api.github.com/users/hiteshchoudhary';
     const apiRequest = new XMLHttpRequest();
@@ -37,8 +42,9 @@
        } 
     }
 }
-
+fetch();
 setInterval(fetch,2000);
+}
 
     //delay(200).then(function() {
           //  userName.innerHTML =`@`;
