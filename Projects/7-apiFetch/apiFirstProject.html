@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; text-align: center;">
+    <div id="container" style="width:200px; border:3px solid whitesmoke; height:200px; color: white; margin-left: 32%; margin-top:30%;">
+        <div id="image" style="height: 170px; width: 170px; border: solid blue; margin: auto;"></div>
+        <div id="name" style="border: solid yellow;">@coding108</div>
+    </div>
+</body>
+<script>
+    const imgbox = document.querySelector("#image");
+    const userName = document.querySelector("#name");
+
+   
+
+ function fetch() {
+    const apiUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const apiRequest = new XMLHttpRequest();
+    apiRequest.open('GET', apiUrl);
+    apiRequest.send();
+
+    apiRequest.onreadystatechange = function(){
+        if(apiRequest.readyState == 4) {
+         const data = JSON.parse(this.responseText); // this will convert response into object
+         const imgUrl = data.avatar_url;
+         const username = data.name;
+         imgbox.innerHTML = `<img style="height: 170px; width: 170px;" src = ${imgUrl} >`;
+         setTimeout(function(){
+            userName.innerHTML =`${username}`;
+            console.log(userName.innerHTML)
+         },1000);
+         userName.innerHTML =`@coding108`;
+       } 
+    }
+}
+
+setInterval(fetch,2000);
+
+    //delay(200).then(function() {
+          //  userName.innerHTML =`@`;
+        //    console.log(userName.innerHTML)
+  //       });
+
+
+
+       
+        
+
+   
+
+</script>
+</html>
